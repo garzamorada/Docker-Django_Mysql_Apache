@@ -1,3 +1,9 @@
+-- ----------------------------------------------------
+-- AÑADO USUARIO MULTIHOST
+-- ----------------------------------------------------
+CREATE USER 'dbadmin'@'%' IDENTIFIED BY 'DBadminpass'; GRANT ALL PRIVILEGES ON *.* TO 'dbadmin'@'%' WITH GRANT OPTION;
+
+
 -- -----------------------------------------------------
 -- Schema django
 -- -----------------------------------------------------
