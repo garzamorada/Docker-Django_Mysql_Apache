@@ -33,20 +33,6 @@ services:
     networks:
       - django
 
-  httpd:
-    container_name: httpd
-    image: httpd
-    ports:
-      - "80:80"
-      - "443:443"
-    expose: 
-      - "80"
-      - "443"
-    volumes:
-      - www:/var/www/html
-    networks:
-      - django
-
   phpmyadmin:
     container_name: phpmyadmin
     depends_on:
