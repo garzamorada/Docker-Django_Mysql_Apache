@@ -18,7 +18,7 @@ services:
     ports:
       - "3306:3306"
     networks:
-      - django
+      - backend
 
   web:
     container_name: django
@@ -31,7 +31,7 @@ services:
     depends_on:
       - db
     networks:
-      - django
+      - backend
 
   phpmyadmin:
     container_name: phpmyadmin
@@ -49,7 +49,24 @@ services:
       - PMA_HOST=db
       - MYSQL_ROOT_PASSWORD=iamroot 
     networks:
-      - django
+      - backend
+
+  frontend:
+    container_name: frontend
+    image: httpd
+    ports:
+      - "80:80"
+      - "443:443"
+    expose: 
+      - "80"
+      - "443"
+    volumes:
+      - www:/var/www/html
+      - ./httpd.conf:/usr/local/apache2/conf/httpd.conf
+    links:
+      - db
+    networks:
+      - frontend
 
 volumes:
   db-data:
@@ -57,4 +74,5 @@ volumes:
   phpmyadmin:
 
 networks:
-  django:
+  backend:
+  frontend:
