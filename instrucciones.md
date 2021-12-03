@@ -11,3 +11,16 @@ Una vez que sincronizan con el git, antes de ejecutar los contenedores, corran e
 
 Esta configuracion les va a permitir tener su frontend y conectarlo con el backend en django. 
 También deje todo preparado para conectar django a un apache para manejar las conexiones, no lo configuré aún pero estan los plugins instalados.
+
+La idea es hacer 2 aplicaciones la primera para gestión de usuarios, la segunda de gestión de contenido.
+
+# Gestión de Usuarios
+>> recibir del frontend un formulario de registro para el alta
+>> permitir a un admin ver los usuarios
+>> permitir a los usuarios loguearse en el sistema
+>> permitir a cada usuario modificar sus datos y/o opciones y darse de baja
+
+# Gestión de Contenido
+>> Permitir a un administrador cargar, modificar y eliminar contenido
+>> Crear un formulario para tales fines que ademas permita subir archivos (imagenes)
+>> Entregar al frontend un json con los datos y las imagenes que se requieran
