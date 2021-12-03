@@ -57,9 +57,6 @@ services:
     ports:
       - "80:80"
       - "443:443"
-    expose: 
-      - "80"
-      - "443"
     volumes:
       - www:/var/www/html
       - ./httpd.conf:/usr/local/apache2/conf/httpd.conf
