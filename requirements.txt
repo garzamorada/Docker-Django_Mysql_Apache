@@ -3,3 +3,5 @@ psycopg2-binary==2.9.2
 mysqlclient==2.1.0
 mod_wsgi-httpd
 mod_wsgi-standalone
+Pillow==8.0
+Django-cleanup
