@@ -1,0 +1,13 @@
+[
+    {% if lista_peliculas %}
+        {% for pelicula in lista_peliculas %}
+            {
+            "titulo": "{pelicula.titulo}",
+            "imagen": "{pelicula.imagen}",
+            "url": "{pelicula.url}",
+            "categoria": "{pelicula.categoria}",
+            "youtube": "{pelicula.youtube}"
+            },
+        {% endfor %}
+    {% endif %}
+]
