@@ -5,3 +5,5 @@ mod_wsgi-httpd
 mod_wsgi-standalone
 Pillow==8.0
 Django-cleanup
+django-stdimage
+django-cors-headers

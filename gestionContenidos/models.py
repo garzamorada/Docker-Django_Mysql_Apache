@@ -1,6 +1,7 @@
 import os
 from django.conf import settings
 from django.db import models
+from stdimage import StdImageField, JPEGField
 
 class Peliculas(models.Model):
         marvel = 'marvel'
@@ -24,4 +25,4 @@ class Peliculas(models.Model):
         categoria=models.CharField(max_length=100,choices=ListaCatrgorias)
         youtube=models.CharField(max_length=100)
         descripcion=models.TextField(blank=True)
-        imagen=models.ImageField(upload_to='images/',default=None)
+        imagen=StdImageField(upload_to='images/',default=None,variations={'full': (460, 800)}, delete_orphans=True)

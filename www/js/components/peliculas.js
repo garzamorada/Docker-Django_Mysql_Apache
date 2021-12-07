@@ -21,7 +21,7 @@ const movie = {
             return 'index.html?pagina=player&youtube=' + this.youtube + '&titulo=' + this.titulo;
         },
         urlimg() {
-            return '../assets/peliculas/' + this.imagen;
+            return 'http://localhost:8000/media/' + this.imagen;
         }
     }
 }
@@ -53,7 +53,7 @@ export const movies = {
     data: function() {
         return {
             filtercategoria: "",
-            json: "../js/data/peliculas.json",
+            json: "http://localhost:8000/peliculas/",
             peliculas: [],
         }
     },
