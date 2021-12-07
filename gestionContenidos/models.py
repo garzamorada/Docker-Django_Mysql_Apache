@@ -1,7 +1,7 @@
 import os
 from django.conf import settings
 from django.db import models
-from stdimage import StdImageField, JPEGField
+from stdimage import StdImageField
 
 class Peliculas(models.Model):
         marvel = 'marvel'

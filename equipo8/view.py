@@ -14,6 +14,13 @@ def prueba(request):
 def peliculas(request):
     if request.method == 'GET':
         peliculas = Peliculas.objects.all().values('titulo', 'imagen','url','categoria','youtube') 
-        lista_peliculas=list(peliculas)
+        lista_peliculas=muestraImgFull(list(peliculas))
         return JsonResponse(lista_peliculas, safe=False)
+
+def muestraImgFull(lista):
+    for i in range(len(lista)):
+        partesImg=lista[i]['imagen'].rpartition('.')
+        nuevaImg=partesImg[0]+'.full.'+partesImg[2]
+        lista[i]['imagen'] = nuevaImg
+    return lista
     
