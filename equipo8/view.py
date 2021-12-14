@@ -23,4 +23,5 @@ def muestraImgFull(lista):
         nuevaImg=partesImg[0]+'.full.'+partesImg[2]
         lista[i]['imagen'] = nuevaImg
     return lista
+
     
